@@ -256,7 +256,8 @@ body{
   }
   .logo,
   .phone{
-    
+    position: relative;
+    z-index: 50;
   }
   .btn-line{
     position: absolute;
@@ -301,6 +302,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transform: translateY(-100%);
+    transition: .3s ease;
+  }
+  .menu-open .menu{
+    transform: translateY(0%);
   }
   .menu-item{
     padding: 50 px 0;
@@ -365,6 +371,21 @@ body{
   }
   .contact-form{
     padding: 50px 30px;
+  }
+}
+
+@media (max-width: 420px){
+  .nav{
+    flex-wrap: wrap;
+  }
+  .phone{
+    flex-basis: auto;
+    margin-top: 50px;
+    order: 3;
+    width: 100%;
+  }
+  .menu-item{
+    font-size: 32px;
   }
 }
 
